@@ -34,7 +34,7 @@ namespace Design
 
         private void btnProdDsh_Click(object sender, EventArgs e)
         {
-            frmDb prd = new frmDb();
+            frmDashboard prd = new frmDashboard();
             prd.Show();
             this.Close();
         }

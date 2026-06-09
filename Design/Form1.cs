@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Design
 {
-    public partial class frmDb : Form
+    public partial class frmDashboard : Form
     {
-        public frmDb()
+        public frmDashboard()
         {
             InitializeComponent();
         }

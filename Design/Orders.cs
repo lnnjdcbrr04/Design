@@ -29,7 +29,7 @@ namespace Design
 
         private void btnOrdDsh_Click(object sender, EventArgs e)
         {
-            frmDb ord = new frmDb();
+            frmDashboard ord = new frmDashboard();
             ord.Show();
             this.Close();
         }
@@ -57,7 +57,7 @@ namespace Design
 
         private void btnOrdLogout_Click(object sender, EventArgs e)
         {
-            frmDb ord = new frmDb();
+            frmDashboard ord = new frmDashboard();
             ord.Show();
             this.Close();
         }

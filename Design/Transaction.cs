@@ -19,7 +19,7 @@ namespace Design
 
         private void btnTransDsh_Click(object sender, EventArgs e)
         {
-            frmDb trans= new frmDb();
+            frmDashboard trans= new frmDashboard();
             trans.Show();
             this.Close();
         }

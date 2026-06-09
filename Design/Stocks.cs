@@ -24,7 +24,7 @@ namespace Design
 
         private void btnStkDsh_Click(object sender, EventArgs e)
         {
-            frmDb stk = new frmDb();
+            frmDashboard stk = new frmDashboard();
             stk.Show();
             this.Close();
         }

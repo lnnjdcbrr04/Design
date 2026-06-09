@@ -2,15 +2,8 @@
 {
     partial class frmUsers
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,16 +15,12 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsers));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
@@ -43,12 +32,7 @@
             this.btnUsrTrans = new System.Windows.Forms.Button();
             this.btnUsrStocks = new System.Windows.Forms.Button();
             this.btnUsrProd = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.colFullname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UsrName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UsrRole = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UsrStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UsrCreated = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvAll = new System.Windows.Forms.DataGridView();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbUsrStatus = new System.Windows.Forms.ComboBox();
@@ -67,10 +51,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtStaffname = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.lblSelectedUserID = new System.Windows.Forms.Label();
             this.guna2GradientPanel2.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAll)).BeginInit();
             this.guna2GroupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -239,69 +224,36 @@
             this.btnUsrProd.UseVisualStyleBackColor = false;
             this.btnUsrProd.Click += new System.EventHandler(this.btnProd_Click);
             // 
-            // dataGridView1
+            // dgvAll
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Linen;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colFullname,
-            this.UsrName,
-            this.UsrRole,
-            this.UsrStatus,
-            this.UsrCreated});
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dataGridView1.Location = new System.Drawing.Point(333, 258);
-            this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle15;
-            this.dataGridView1.Size = new System.Drawing.Size(855, 320);
-            this.dataGridView1.TabIndex = 114;
-            // 
-            // colFullname
-            // 
-            this.colFullname.HeaderText = "Fullname";
-            this.colFullname.Name = "colFullname";
-            this.colFullname.Width = 150;
-            // 
-            // UsrName
-            // 
-            this.UsrName.HeaderText = "Username";
-            this.UsrName.Name = "UsrName";
-            this.UsrName.Width = 160;
-            // 
-            // UsrRole
-            // 
-            this.UsrRole.HeaderText = "Role";
-            this.UsrRole.Name = "UsrRole";
-            this.UsrRole.Width = 160;
-            // 
-            // UsrStatus
-            // 
-            this.UsrStatus.HeaderText = "Status";
-            this.UsrStatus.Name = "UsrStatus";
-            this.UsrStatus.Width = 160;
-            // 
-            // UsrCreated
-            // 
-            this.UsrCreated.HeaderText = "Date Created";
-            this.UsrCreated.Name = "UsrCreated";
-            this.UsrCreated.Width = 180;
+            this.dgvAll.BackgroundColor = System.Drawing.Color.Linen;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAll.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvAll.AutoGenerateColumns = true;
+            this.dgvAll.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAll.GridColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.dgvAll.ReadOnly = true;
+            this.dgvAll.Location = new System.Drawing.Point(333, 258);
+            this.dgvAll.Name = "dgvAll";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAll.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvAll.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvAll.Size = new System.Drawing.Size(912, 320);
+            this.dgvAll.TabIndex = 114;
+            this.dgvAll.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAll_CellClick);
             // 
             // guna2Separator1
             // 
@@ -326,29 +278,25 @@
             // 
             // cmbUsrStatus
             // 
+            this.cmbUsrStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbUsrStatus.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbUsrStatus.FormattingEnabled = true;
-            this.cmbUsrStatus.Items.AddRange(new object[] {
-            "Active",
-            "Inactive"});
             this.cmbUsrStatus.Location = new System.Drawing.Point(574, 208);
             this.cmbUsrStatus.Name = "cmbUsrStatus";
             this.cmbUsrStatus.Size = new System.Drawing.Size(235, 34);
             this.cmbUsrStatus.TabIndex = 118;
-            this.cmbUsrStatus.Text = " --  Status --";
+            this.cmbUsrStatus.SelectedIndexChanged += new System.EventHandler(this.cmbUsrStatus_SelectedIndexChanged);
             // 
             // cmbRoles
             // 
+            this.cmbRoles.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbRoles.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbRoles.FormattingEnabled = true;
-            this.cmbRoles.Items.AddRange(new object[] {
-            "Admin",
-            "Staff"});
             this.cmbRoles.Location = new System.Drawing.Point(333, 208);
             this.cmbRoles.Name = "cmbRoles";
             this.cmbRoles.Size = new System.Drawing.Size(235, 34);
             this.cmbRoles.TabIndex = 117;
-            this.cmbRoles.Text = "  -- All Roles --";
+            this.cmbRoles.SelectedIndexChanged += new System.EventHandler(this.cmbRoles_SelectedIndexChanged);
             // 
             // guna2GroupBox1
             // 
@@ -388,6 +336,7 @@
             this.btnEditStaff.TabIndex = 33;
             this.btnEditStaff.Text = "Edit Staff";
             this.btnEditStaff.UseVisualStyleBackColor = false;
+            this.btnEditStaff.Click += new System.EventHandler(this.btnEditStaff_Click);
             // 
             // btnDeleteStaff
             // 
@@ -403,6 +352,7 @@
             this.btnDeleteStaff.Size = new System.Drawing.Size(118, 40);
             this.btnDeleteStaff.TabIndex = 32;
             this.btnDeleteStaff.Text = "Delete";
+            this.btnDeleteStaff.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnAddStaff
             // 
@@ -416,9 +366,11 @@
             this.btnAddStaff.TabIndex = 31;
             this.btnAddStaff.Text = "Add Staff";
             this.btnAddStaff.UseVisualStyleBackColor = false;
+            this.btnAddStaff.Click += new System.EventHandler(this.btnAddStaff_Click);
             // 
             // cmbStaffStatus
             // 
+            this.cmbStaffStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbStaffStatus.FormattingEnabled = true;
             this.cmbStaffStatus.Location = new System.Drawing.Point(487, 248);
             this.cmbStaffStatus.Name = "cmbStaffStatus";
@@ -437,6 +389,7 @@
             // 
             // cmbStaffRole
             // 
+            this.cmbStaffRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbStaffRole.FormattingEnabled = true;
             this.cmbStaffRole.Location = new System.Drawing.Point(487, 174);
             this.cmbStaffRole.Name = "cmbStaffRole";
@@ -507,18 +460,28 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Fullname:";
             // 
+            // lblSelectedUserID
+            // 
+            this.lblSelectedUserID.AutoSize = true;
+            this.lblSelectedUserID.Location = new System.Drawing.Point(370, 404);
+            this.lblSelectedUserID.Name = "lblSelectedUserID";
+            this.lblSelectedUserID.Size = new System.Drawing.Size(0, 13);
+            this.lblSelectedUserID.TabIndex = 124;
+            this.lblSelectedUserID.Visible = false;
+            // 
             // frmUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(1285, 1041);
+            this.Controls.Add(this.lblSelectedUserID);
             this.Controls.Add(this.guna2GroupBox1);
             this.Controls.Add(this.cmbUsrStatus);
             this.Controls.Add(this.cmbRoles);
             this.Controls.Add(this.guna2Separator1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvAll);
             this.Controls.Add(this.guna2GradientPanel2);
             this.Controls.Add(this.guna2GradientPanel1);
             this.Name = "frmUsers";
@@ -527,12 +490,11 @@
             this.guna2GradientPanel2.PerformLayout();
             this.guna2GradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAll)).EndInit();
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
@@ -548,12 +510,7 @@
         private System.Windows.Forms.Button btnUsrTrans;
         private System.Windows.Forms.Button btnUsrStocks;
         private System.Windows.Forms.Button btnUsrProd;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colFullname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UsrName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UsrRole;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UsrStatus;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UsrCreated;
+        private System.Windows.Forms.DataGridView dgvAll;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbUsrStatus;
@@ -572,5 +529,6 @@
         private System.Windows.Forms.Button btnEditStaff;
         private Guna.UI2.WinForms.Guna2Button btnDeleteStaff;
         private System.Windows.Forms.Button btnAddStaff;
+        private System.Windows.Forms.Label lblSelectedUserID;
     }
 }
