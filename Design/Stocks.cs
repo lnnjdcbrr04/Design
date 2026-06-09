@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Design
 {
-    public partial class Stocks : Form
+    public partial class frmStocks : Form
     {
-        public Stocks()
+        public frmStocks()
         {
             InitializeComponent();
         }
@@ -20,6 +20,41 @@ namespace Design
         private void progressBar1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnStkDsh_Click(object sender, EventArgs e)
+        {
+            frmDb stk = new frmDb();
+            stk.Show();
+            this.Close();
+        }
+
+        private void btnStkProd_Click(object sender, EventArgs e)
+        {
+            frmProducts prd = new frmProducts();
+            prd.Show();
+            this.Close();
+        }
+
+        private void btnStkTrans_Click(object sender, EventArgs e)
+        {
+            frmTransaction prd = new frmTransaction();
+            prd.Show();
+            this.Close();
+        }
+
+        private void btnStkOrders_Click(object sender, EventArgs e)
+        {
+            frmOrders prd = new frmOrders();
+            prd.Show();
+            this.Close();
+        }
+
+        private void btnStkUsers_Click(object sender, EventArgs e)
+        {
+            frmUsers prd = new frmUsers();
+            prd.Show();
+            this.Close();
         }
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Design
 {
-    public partial class Orders : Form
+    public partial class frmOrders : Form
     {
-        public Orders()
+        public frmOrders()
         {
             InitializeComponent();
         }
@@ -25,6 +25,48 @@ namespace Design
         private void guna2Button2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnOrdDsh_Click(object sender, EventArgs e)
+        {
+            frmDb ord = new frmDb();
+            ord.Show();
+            this.Close();
+        }
+
+        private void btnOrdProd_Click(object sender, EventArgs e)
+        {
+            frmProducts ord = new frmProducts();
+            ord.Show();
+            this.Close();
+        }
+
+        private void btnOrdStocks_Click(object sender, EventArgs e)
+        {
+            frmStocks ord = new frmStocks();
+            ord.Show();
+            this.Close();
+        }
+
+        private void btnOrdTrans_Click(object sender, EventArgs e)
+        {
+            frmTransaction ord = new frmTransaction();
+            ord.Show();
+            this.Close();
+        }
+
+        private void btnOrdLogout_Click(object sender, EventArgs e)
+        {
+            frmDb ord = new frmDb();
+            ord.Show();
+            this.Close();
+        }
+
+        private void btnOrdUsers_Click(object sender, EventArgs e)
+        {
+            frmUsers ord = new frmUsers();
+            ord.Show();
+            this.Close();
         }
     }
 }

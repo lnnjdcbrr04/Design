@@ -1,6 +1,6 @@
 ﻿namespace Design
 {
-    partial class Transaction
+    partial class frmTransaction
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Transaction));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTransaction));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
@@ -45,17 +45,17 @@
             this.btnTransStocks = new System.Windows.Forms.Button();
             this.btnTransProd = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbTransStat = new System.Windows.Forms.ComboBox();
+            this.cmbTransCategory = new System.Windows.Forms.ComboBox();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.label2 = new System.Windows.Forms.Label();
             this.ProductID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TransName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descritpion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amnt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Staff = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2GradientPanel2.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -131,6 +131,7 @@
             this.btnTransDsh.Text = "     Dashboard";
             this.btnTransDsh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTransDsh.UseVisualStyleBackColor = false;
+            this.btnTransDsh.Click += new System.EventHandler(this.btnTransDsh_Click);
             // 
             // btnTransLogout
             // 
@@ -161,6 +162,7 @@
             this.btnTransUsers.Text = "     Users";
             this.btnTransUsers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTransUsers.UseVisualStyleBackColor = false;
+            this.btnTransUsers.Click += new System.EventHandler(this.btnTransUsers_Click);
             // 
             // btnTransOrders
             // 
@@ -176,6 +178,7 @@
             this.btnTransOrders.Text = "     Orders";
             this.btnTransOrders.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTransOrders.UseVisualStyleBackColor = false;
+            this.btnTransOrders.Click += new System.EventHandler(this.btnTransOrders_Click);
             // 
             // btnTrans
             // 
@@ -206,6 +209,7 @@
             this.btnTransStocks.Text = "     Stocks";
             this.btnTransStocks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTransStocks.UseVisualStyleBackColor = false;
+            this.btnTransStocks.Click += new System.EventHandler(this.btnTransStocks_Click);
             // 
             // btnTransProd
             // 
@@ -221,61 +225,62 @@
             this.btnTransProd.Text = "     Products";
             this.btnTransProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTransProd.UseVisualStyleBackColor = false;
+            this.btnTransProd.Click += new System.EventHandler(this.btnTransProd_Click);
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ProductID,
-            this.TransName,
-            this.Category,
-            this.Price,
-            this.Qty,
-            this.Descritpion,
-            this.Status});
+            this.prod,
+            this.Type,
+            this.Quantity,
+            this.amnt,
+            this.Staff,
+            this.date});
             this.dataGridView1.Location = new System.Drawing.Point(326, 247);
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle23;
             this.dataGridView1.RowHeadersVisible = false;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle24;
             this.dataGridView1.Size = new System.Drawing.Size(1133, 440);
             this.dataGridView1.TabIndex = 117;
             // 
-            // comboBox2
+            // cmbTransStat
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(665, 186);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(279, 36);
-            this.comboBox2.TabIndex = 116;
-            this.comboBox2.Text = "  Status";
+            this.cmbTransStat.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTransStat.FormattingEnabled = true;
+            this.cmbTransStat.Location = new System.Drawing.Point(665, 186);
+            this.cmbTransStat.Name = "cmbTransStat";
+            this.cmbTransStat.Size = new System.Drawing.Size(279, 36);
+            this.cmbTransStat.TabIndex = 116;
+            this.cmbTransStat.Text = "  Status";
             // 
-            // comboBox1
+            // cmbTransCategory
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(350, 186);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(279, 36);
-            this.comboBox1.TabIndex = 115;
-            this.comboBox1.Text = "  All Category";
+            this.cmbTransCategory.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTransCategory.FormattingEnabled = true;
+            this.cmbTransCategory.Location = new System.Drawing.Point(350, 186);
+            this.cmbTransCategory.Name = "cmbTransCategory";
+            this.cmbTransCategory.Size = new System.Drawing.Size(279, 36);
+            this.cmbTransCategory.TabIndex = 115;
+            this.cmbTransCategory.Text = "  All Category";
             // 
             // guna2Separator1
             // 
@@ -300,62 +305,62 @@
             // 
             // ProductID
             // 
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProductID.DefaultCellStyle = dataGridViewCellStyle6;
-            this.ProductID.HeaderText = "Product ID";
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProductID.DefaultCellStyle = dataGridViewCellStyle22;
+            this.ProductID.HeaderText = "ID";
             this.ProductID.Name = "ProductID";
             this.ProductID.Width = 130;
             // 
-            // TransName
+            // prod
             // 
-            this.TransName.HeaderText = "Name";
-            this.TransName.Name = "TransName";
-            this.TransName.Width = 170;
+            this.prod.HeaderText = "Product";
+            this.prod.Name = "prod";
+            this.prod.Width = 170;
             // 
-            // Category
+            // Type
             // 
-            this.Category.HeaderText = "Category";
-            this.Category.Name = "Category";
-            this.Category.Width = 180;
+            this.Type.HeaderText = "Type";
+            this.Type.Name = "Type";
+            this.Type.Width = 180;
             // 
-            // Price
+            // Quantity
             // 
-            this.Price.HeaderText = "Price";
-            this.Price.Name = "Price";
-            this.Price.Width = 160;
+            this.Quantity.HeaderText = "Qty";
+            this.Quantity.Name = "Quantity";
+            this.Quantity.Width = 160;
             // 
-            // Qty
+            // amnt
             // 
-            this.Qty.HeaderText = "Qty";
-            this.Qty.Name = "Qty";
-            this.Qty.Width = 150;
+            this.amnt.HeaderText = "Amount";
+            this.amnt.Name = "amnt";
+            this.amnt.Width = 150;
             // 
-            // Descritpion
+            // Staff
             // 
-            this.Descritpion.HeaderText = "Description";
-            this.Descritpion.Name = "Descritpion";
-            this.Descritpion.Width = 190;
+            this.Staff.HeaderText = "Staff";
+            this.Staff.Name = "Staff";
+            this.Staff.Width = 190;
             // 
-            // Status
+            // date
             // 
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
-            this.Status.Width = 150;
+            this.date.HeaderText = "Date";
+            this.date.Name = "date";
+            this.date.Width = 150;
             // 
-            // Transaction
+            // frmTransaction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(1884, 1041);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbTransStat);
+            this.Controls.Add(this.cmbTransCategory);
             this.Controls.Add(this.guna2Separator1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.guna2GradientPanel2);
             this.Controls.Add(this.guna2GradientPanel1);
-            this.Name = "Transaction";
+            this.Name = "frmTransaction";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Transaction";
             this.guna2GradientPanel2.ResumeLayout(false);
@@ -382,16 +387,16 @@
         private System.Windows.Forms.Button btnTransStocks;
         private System.Windows.Forms.Button btnTransProd;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbTransStat;
+        private System.Windows.Forms.ComboBox cmbTransCategory;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TransName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Category;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Qty;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descritpion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prod;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Type;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amnt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Staff;
+        private System.Windows.Forms.DataGridViewTextBoxColumn date;
     }
 }

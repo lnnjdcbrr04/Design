@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Design
 {
-    public partial class Form1 : Form
+    public partial class frmDb : Form
     {
-        public Form1()
+        public frmDb()
         {
             InitializeComponent();
         }
@@ -29,6 +29,41 @@ namespace Design
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
+        }
+
+        private void btnDbProd_Click(object sender, EventArgs e)
+        {
+            frmProducts  db = new frmProducts();
+            db.Show();
+            this.Close();
+        }
+
+        private void btnDbStocks_Click(object sender, EventArgs e)
+        {
+            frmStocks db = new frmStocks();
+            db.Show();
+            this.Close();
+        }
+
+        private void btnDbTrans_Click(object sender, EventArgs e)
+        {
+            frmTransaction db = new frmTransaction();
+            db.Show();
+            this.Close();
+        }
+
+        private void btnDbOrders_Click(object sender, EventArgs e)
+        {
+            frmOrders db = new frmOrders();
+            db.Show();
+            this.Close();
+        }
+
+        private void btnDbUsers_Click(object sender, EventArgs e)
+        {
+            frmUsers db = new frmUsers();
+            db.Show();
+            this.Close();
         }
     }
 }

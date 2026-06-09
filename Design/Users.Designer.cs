@@ -1,6 +1,6 @@
 ﻿namespace Design
 {
-    partial class Users
+    partial class frmUsers
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Users));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsers));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnUsrDsh = new System.Windows.Forms.Button();
             this.btnUsrLogout = new System.Windows.Forms.Button();
             this.btnUsers = new System.Windows.Forms.Button();
@@ -42,7 +43,6 @@
             this.btnUsrTrans = new System.Windows.Forms.Button();
             this.btnUsrStocks = new System.Windows.Forms.Button();
             this.btnUsrProd = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.colFullname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UsrName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,22 +51,22 @@
             this.UsrCreated = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbUsrStatus = new System.Windows.Forms.ComboBox();
+            this.cmbRoles = new System.Windows.Forms.ComboBox();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.btnEditStaff = new System.Windows.Forms.Button();
+            this.btnDeleteStaff = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAddStaff = new System.Windows.Forms.Button();
+            this.cmbStaffStatus = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAddProduct = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.cmbStaffRole = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtUsrPw = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtStaffname = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.guna2GradientPanel2.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -117,6 +117,18 @@
             this.guna2GradientPanel1.Size = new System.Drawing.Size(292, 1041);
             this.guna2GradientPanel1.TabIndex = 106;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(47, 27);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(178, 170);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
             // btnUsrDsh
             // 
             this.btnUsrDsh.BackColor = System.Drawing.Color.Transparent;
@@ -131,6 +143,7 @@
             this.btnUsrDsh.Text = "     Dashboard";
             this.btnUsrDsh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUsrDsh.UseVisualStyleBackColor = false;
+            this.btnUsrDsh.Click += new System.EventHandler(this.btnUsrDsh_Click);
             // 
             // btnUsrLogout
             // 
@@ -176,6 +189,7 @@
             this.btnUsrOrders.Text = "     Orders";
             this.btnUsrOrders.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUsrOrders.UseVisualStyleBackColor = false;
+            this.btnUsrOrders.Click += new System.EventHandler(this.btnUsrOrders_Click);
             // 
             // btnUsrTrans
             // 
@@ -191,6 +205,7 @@
             this.btnUsrTrans.Text = "     Transaction";
             this.btnUsrTrans.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUsrTrans.UseVisualStyleBackColor = false;
+            this.btnUsrTrans.Click += new System.EventHandler(this.btnUsrTrans_Click);
             // 
             // btnUsrStocks
             // 
@@ -206,6 +221,7 @@
             this.btnUsrStocks.Text = "     Stocks";
             this.btnUsrStocks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUsrStocks.UseVisualStyleBackColor = false;
+            this.btnUsrStocks.Click += new System.EventHandler(this.btnUsrStocks_Click);
             // 
             // btnUsrProd
             // 
@@ -223,29 +239,17 @@
             this.btnUsrProd.UseVisualStyleBackColor = false;
             this.btnUsrProd.Click += new System.EventHandler(this.btnProd_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(47, 27);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(178, 170);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Linen;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colFullname,
@@ -256,16 +260,16 @@
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dataGridView1.Location = new System.Drawing.Point(333, 258);
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle17;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.dataGridView1.Size = new System.Drawing.Size(855, 320);
             this.dataGridView1.TabIndex = 114;
             // 
@@ -320,47 +324,47 @@
             this.label2.TabIndex = 115;
             this.label2.Text = "Users Management";
             // 
-            // comboBox2
+            // cmbUsrStatus
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cmbUsrStatus.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbUsrStatus.FormattingEnabled = true;
+            this.cmbUsrStatus.Items.AddRange(new object[] {
             "Active",
             "Inactive"});
-            this.comboBox2.Location = new System.Drawing.Point(574, 208);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(235, 34);
-            this.comboBox2.TabIndex = 118;
-            this.comboBox2.Text = " --  Status --";
+            this.cmbUsrStatus.Location = new System.Drawing.Point(574, 208);
+            this.cmbUsrStatus.Name = "cmbUsrStatus";
+            this.cmbUsrStatus.Size = new System.Drawing.Size(235, 34);
+            this.cmbUsrStatus.TabIndex = 118;
+            this.cmbUsrStatus.Text = " --  Status --";
             // 
-            // comboBox1
+            // cmbRoles
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbRoles.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbRoles.FormattingEnabled = true;
+            this.cmbRoles.Items.AddRange(new object[] {
             "Admin",
             "Staff"});
-            this.comboBox1.Location = new System.Drawing.Point(333, 208);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(235, 34);
-            this.comboBox1.TabIndex = 117;
-            this.comboBox1.Text = "  -- All Roles --";
+            this.cmbRoles.Location = new System.Drawing.Point(333, 208);
+            this.cmbRoles.Name = "cmbRoles";
+            this.cmbRoles.Size = new System.Drawing.Size(235, 34);
+            this.cmbRoles.TabIndex = 117;
+            this.cmbRoles.Text = "  -- All Roles --";
             // 
             // guna2GroupBox1
             // 
             this.guna2GroupBox1.BorderRadius = 10;
-            this.guna2GroupBox1.Controls.Add(this.button1);
-            this.guna2GroupBox1.Controls.Add(this.guna2Button1);
-            this.guna2GroupBox1.Controls.Add(this.btnAddProduct);
-            this.guna2GroupBox1.Controls.Add(this.comboBox4);
+            this.guna2GroupBox1.Controls.Add(this.btnEditStaff);
+            this.guna2GroupBox1.Controls.Add(this.btnDeleteStaff);
+            this.guna2GroupBox1.Controls.Add(this.btnAddStaff);
+            this.guna2GroupBox1.Controls.Add(this.cmbStaffStatus);
             this.guna2GroupBox1.Controls.Add(this.label7);
-            this.guna2GroupBox1.Controls.Add(this.comboBox3);
+            this.guna2GroupBox1.Controls.Add(this.cmbStaffRole);
             this.guna2GroupBox1.Controls.Add(this.label6);
-            this.guna2GroupBox1.Controls.Add(this.textBox3);
+            this.guna2GroupBox1.Controls.Add(this.txtUsrPw);
             this.guna2GroupBox1.Controls.Add(this.label5);
-            this.guna2GroupBox1.Controls.Add(this.textBox2);
+            this.guna2GroupBox1.Controls.Add(this.txtUsername);
             this.guna2GroupBox1.Controls.Add(this.label4);
-            this.guna2GroupBox1.Controls.Add(this.textBox1);
+            this.guna2GroupBox1.Controls.Add(this.txtStaffname);
             this.guna2GroupBox1.Controls.Add(this.label3);
             this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.MistyRose;
             this.guna2GroupBox1.FillColor = System.Drawing.Color.Transparent;
@@ -372,85 +376,54 @@
             this.guna2GroupBox1.TabIndex = 119;
             this.guna2GroupBox1.Text = "Add/Edit Staff";
             // 
-            // label3
+            // btnEditStaff
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(46, 75);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 26);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Fullname:";
+            this.btnEditStaff.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnEditStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditStaff.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditStaff.ForeColor = System.Drawing.Color.White;
+            this.btnEditStaff.Location = new System.Drawing.Point(604, 311);
+            this.btnEditStaff.Name = "btnEditStaff";
+            this.btnEditStaff.Size = new System.Drawing.Size(118, 40);
+            this.btnEditStaff.TabIndex = 33;
+            this.btnEditStaff.Text = "Edit Staff";
+            this.btnEditStaff.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // btnDeleteStaff
             // 
-            this.textBox1.Location = new System.Drawing.Point(51, 104);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(248, 30);
-            this.textBox1.TabIndex = 1;
+            this.btnDeleteStaff.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDeleteStaff.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDeleteStaff.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDeleteStaff.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDeleteStaff.FillColor = System.Drawing.Color.Transparent;
+            this.btnDeleteStaff.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteStaff.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.btnDeleteStaff.Location = new System.Drawing.Point(728, 311);
+            this.btnDeleteStaff.Name = "btnDeleteStaff";
+            this.btnDeleteStaff.Size = new System.Drawing.Size(118, 40);
+            this.btnDeleteStaff.TabIndex = 32;
+            this.btnDeleteStaff.Text = "Delete";
             // 
-            // textBox2
+            // btnAddStaff
             // 
-            this.textBox2.Location = new System.Drawing.Point(51, 181);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(248, 30);
-            this.textBox2.TabIndex = 3;
+            this.btnAddStaff.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnAddStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddStaff.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddStaff.ForeColor = System.Drawing.Color.White;
+            this.btnAddStaff.Location = new System.Drawing.Point(480, 311);
+            this.btnAddStaff.Name = "btnAddStaff";
+            this.btnAddStaff.Size = new System.Drawing.Size(118, 40);
+            this.btnAddStaff.TabIndex = 31;
+            this.btnAddStaff.Text = "Add Staff";
+            this.btnAddStaff.UseVisualStyleBackColor = false;
             // 
-            // label4
+            // cmbStaffStatus
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(46, 152);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(102, 26);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Username:";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(487, 104);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(248, 30);
-            this.textBox3.TabIndex = 5;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(482, 75);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(96, 26);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Password:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(482, 145);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(54, 26);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Role:";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(487, 174);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(146, 30);
-            this.comboBox3.TabIndex = 7;
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(487, 248);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(146, 30);
-            this.comboBox4.TabIndex = 9;
+            this.cmbStaffStatus.FormattingEnabled = true;
+            this.cmbStaffStatus.Location = new System.Drawing.Point(487, 248);
+            this.cmbStaffStatus.Name = "cmbStaffStatus";
+            this.cmbStaffStatus.Size = new System.Drawing.Size(146, 30);
+            this.cmbStaffStatus.TabIndex = 9;
             // 
             // label7
             // 
@@ -462,62 +435,93 @@
             this.label7.TabIndex = 8;
             this.label7.Text = "Status:";
             // 
-            // guna2Button1
+            // cmbStaffRole
             // 
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.guna2Button1.Location = new System.Drawing.Point(728, 311);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(118, 40);
-            this.guna2Button1.TabIndex = 32;
-            this.guna2Button1.Text = "Delete";
+            this.cmbStaffRole.FormattingEnabled = true;
+            this.cmbStaffRole.Location = new System.Drawing.Point(487, 174);
+            this.cmbStaffRole.Name = "cmbStaffRole";
+            this.cmbStaffRole.Size = new System.Drawing.Size(146, 30);
+            this.cmbStaffRole.TabIndex = 7;
             // 
-            // btnAddProduct
+            // label6
             // 
-            this.btnAddProduct.BackColor = System.Drawing.Color.RosyBrown;
-            this.btnAddProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddProduct.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddProduct.ForeColor = System.Drawing.Color.White;
-            this.btnAddProduct.Location = new System.Drawing.Point(480, 311);
-            this.btnAddProduct.Name = "btnAddProduct";
-            this.btnAddProduct.Size = new System.Drawing.Size(118, 40);
-            this.btnAddProduct.TabIndex = 31;
-            this.btnAddProduct.Text = "Add Staff";
-            this.btnAddProduct.UseVisualStyleBackColor = false;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(482, 145);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(54, 26);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Role:";
             // 
-            // button1
+            // txtUsrPw
             // 
-            this.button1.BackColor = System.Drawing.Color.RosyBrown;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(604, 311);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 40);
-            this.button1.TabIndex = 33;
-            this.button1.Text = "Edit Staff";
-            this.button1.UseVisualStyleBackColor = false;
+            this.txtUsrPw.Location = new System.Drawing.Point(487, 104);
+            this.txtUsrPw.Multiline = true;
+            this.txtUsrPw.Name = "txtUsrPw";
+            this.txtUsrPw.Size = new System.Drawing.Size(248, 30);
+            this.txtUsrPw.TabIndex = 5;
             // 
-            // Users
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(482, 75);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(96, 26);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Password:";
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.Location = new System.Drawing.Point(51, 181);
+            this.txtUsername.Multiline = true;
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(248, 30);
+            this.txtUsername.TabIndex = 3;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(46, 152);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(102, 26);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Username:";
+            // 
+            // txtStaffname
+            // 
+            this.txtStaffname.Location = new System.Drawing.Point(51, 104);
+            this.txtStaffname.Multiline = true;
+            this.txtStaffname.Name = "txtStaffname";
+            this.txtStaffname.Size = new System.Drawing.Size(248, 30);
+            this.txtStaffname.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(46, 75);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(95, 26);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Fullname:";
+            // 
+            // frmUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(1285, 1041);
             this.Controls.Add(this.guna2GroupBox1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbUsrStatus);
+            this.Controls.Add(this.cmbRoles);
             this.Controls.Add(this.guna2Separator1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.guna2GradientPanel2);
             this.Controls.Add(this.guna2GradientPanel1);
-            this.Name = "Users";
+            this.Name = "frmUsers";
             this.Text = "Users";
             this.guna2GradientPanel2.ResumeLayout(false);
             this.guna2GradientPanel2.PerformLayout();
@@ -552,21 +556,21 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn UsrCreated;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbUsrStatus;
+        private System.Windows.Forms.ComboBox cmbRoles;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtStaffname;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox cmbStaffStatus;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cmbStaffRole;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtUsrPw;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private System.Windows.Forms.Button btnAddProduct;
+        private System.Windows.Forms.Button btnEditStaff;
+        private Guna.UI2.WinForms.Guna2Button btnDeleteStaff;
+        private System.Windows.Forms.Button btnAddStaff;
     }
 }
