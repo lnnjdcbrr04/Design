@@ -144,6 +144,7 @@
             this.btnUsrLogout.Text = "     Logout";
             this.btnUsrLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUsrLogout.UseVisualStyleBackColor = false;
+            this.btnUsrLogout.Click += new System.EventHandler(this.btnUsrLogout_Click);
             // 
             // btnUsers
             // 
@@ -226,21 +227,21 @@
             // 
             // dgvAll
             // 
+            this.dgvAll.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAll.BackgroundColor = System.Drawing.Color.Linen;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvAll.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvAll.AutoGenerateColumns = true;
             this.dgvAll.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAll.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dgvAll.ReadOnly = true;
             this.dgvAll.Location = new System.Drawing.Point(333, 258);
             this.dgvAll.Name = "dgvAll";
+            this.dgvAll.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -495,6 +496,7 @@
             this.guna2GroupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion

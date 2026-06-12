@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStocks));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
@@ -44,16 +44,14 @@
             this.btnStocks = new System.Windows.Forms.Button();
             this.btnStkProd = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.guna2ProgressBar1 = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.ProductID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Stockin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Stockout = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.net = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Thresh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Updateed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
+            this.label2 = new System.Windows.Forms.Label();
             this.guna2GradientPanel2.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -145,6 +143,7 @@
             this.btnStkLogout.Text = "     Logout";
             this.btnStkLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnStkLogout.UseVisualStyleBackColor = false;
+            this.btnStkLogout.Click += new System.EventHandler(this.btnStkLogout_Click);
             // 
             // btnStkUsers
             // 
@@ -227,14 +226,15 @@
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ProductID,
@@ -243,20 +243,50 @@
             this.net,
             this.Thresh,
             this.Updateed});
-            this.dataGridView1.Location = new System.Drawing.Point(323, 312);
+            this.dataGridView1.Location = new System.Drawing.Point(333, 209);
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle17;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle18;
-            this.dataGridView1.Size = new System.Drawing.Size(1075, 320);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView1.Size = new System.Drawing.Size(1171, 772);
             this.dataGridView1.TabIndex = 113;
+            // 
+            // ProductID
+            // 
+            this.ProductID.HeaderText = "Product ";
+            this.ProductID.Name = "ProductID";
+            // 
+            // Stockin
+            // 
+            this.Stockin.HeaderText = "Stock in";
+            this.Stockin.Name = "Stockin";
+            // 
+            // Stockout
+            // 
+            this.Stockout.HeaderText = "Stock out";
+            this.Stockout.Name = "Stockout";
+            // 
+            // net
+            // 
+            this.net.HeaderText = "Net";
+            this.net.Name = "net";
+            // 
+            // Thresh
+            // 
+            this.Thresh.HeaderText = "Threshold";
+            this.Thresh.Name = "Thresh";
+            // 
+            // Updateed
+            // 
+            this.Updateed.HeaderText = "Update";
+            this.Updateed.Name = "Updateed";
             // 
             // guna2Separator1
             // 
@@ -279,73 +309,12 @@
             this.label2.TabIndex = 114;
             this.label2.Text = "Stocks Management";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Brown;
-            this.label9.Location = new System.Drawing.Point(343, 169);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(172, 28);
-            this.label9.TabIndex = 117;
-            this.label9.Text = "Low Stocks Alert";
-            // 
-            // guna2ProgressBar1
-            // 
-            this.guna2ProgressBar1.BorderRadius = 15;
-            this.guna2ProgressBar1.FillColor = System.Drawing.Color.Crimson;
-            this.guna2ProgressBar1.Location = new System.Drawing.Point(348, 224);
-            this.guna2ProgressBar1.Name = "guna2ProgressBar1";
-            this.guna2ProgressBar1.ProgressColor = System.Drawing.Color.Red;
-            this.guna2ProgressBar1.Size = new System.Drawing.Size(300, 25);
-            this.guna2ProgressBar1.TabIndex = 118;
-            this.guna2ProgressBar1.Text = "guna2ProgressBar1";
-            this.guna2ProgressBar1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            // 
-            // ProductID
-            // 
-            this.ProductID.HeaderText = "Product ";
-            this.ProductID.Name = "ProductID";
-            this.ProductID.Width = 180;
-            // 
-            // Stockin
-            // 
-            this.Stockin.HeaderText = "Stock in";
-            this.Stockin.Name = "Stockin";
-            this.Stockin.Width = 160;
-            // 
-            // Stockout
-            // 
-            this.Stockout.HeaderText = "Stock out";
-            this.Stockout.Name = "Stockout";
-            this.Stockout.Width = 180;
-            // 
-            // net
-            // 
-            this.net.HeaderText = "Net";
-            this.net.Name = "net";
-            this.net.Width = 160;
-            // 
-            // Thresh
-            // 
-            this.Thresh.HeaderText = "Threshold";
-            this.Thresh.Name = "Thresh";
-            this.Thresh.Width = 170;
-            // 
-            // Updateed
-            // 
-            this.Updateed.HeaderText = "Update";
-            this.Updateed.Name = "Updateed";
-            this.Updateed.Width = 180;
-            // 
             // frmStocks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(1884, 1041);
-            this.Controls.Add(this.guna2ProgressBar1);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.guna2Separator1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);
@@ -353,6 +322,7 @@
             this.Controls.Add(this.guna2GradientPanel1);
             this.Name = "frmStocks";
             this.Text = "Stocks";
+            this.Load += new System.EventHandler(this.frmStocks_Load);
             this.guna2GradientPanel2.ResumeLayout(false);
             this.guna2GradientPanel2.PerformLayout();
             this.guna2GradientPanel1.ResumeLayout(false);
@@ -379,8 +349,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label9;
-        private Guna.UI2.WinForms.Guna2ProgressBar guna2ProgressBar1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Stockin;
         private System.Windows.Forms.DataGridViewTextBoxColumn Stockout;

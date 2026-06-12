@@ -58,7 +58,6 @@
             // 
             // guna2CustomGradientPanel1
             // 
-            this.guna2CustomGradientPanel1.BorderRadius = 50;
             this.guna2CustomGradientPanel1.Controls.Add(this.txtPassword);
             this.guna2CustomGradientPanel1.Controls.Add(this.label1);
             this.guna2CustomGradientPanel1.Controls.Add(this.txtUsername);
@@ -71,9 +70,9 @@
             this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.LavenderBlush;
             this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.LavenderBlush;
             this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.MistyRose;
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(931, 24);
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(899, 0);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(928, 992);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1198, 1041);
             this.guna2CustomGradientPanel1.TabIndex = 15;
             this.guna2CustomGradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2CustomGradientPanel1_Paint);
             // 
@@ -89,7 +88,8 @@
             this.txtPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.ForeColor = System.Drawing.Color.Black;
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassword.Location = new System.Drawing.Point(299, 626);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -123,7 +123,8 @@
             this.txtUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.ForeColor = System.Drawing.Color.Black;
             this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUsername.Location = new System.Drawing.Point(299, 534);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -191,7 +192,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label2.Location = new System.Drawing.Point(306, 383);
+            this.label2.Location = new System.Drawing.Point(306, 407);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(317, 50);
             this.label2.TabIndex = 10;
@@ -206,7 +207,9 @@
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Controls.Add(this.pictureBox2);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "Login";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();

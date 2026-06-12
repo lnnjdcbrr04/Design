@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Design;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,9 @@ namespace Design
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmStocks());
+            Application.Run(new Login());
+
         }
     }
 }
+

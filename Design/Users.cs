@@ -1,13 +1,14 @@
-﻿using System;
+﻿using Design;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 namespace Design
 {
@@ -476,6 +477,13 @@ namespace Design
             string cat = cmbRoles.SelectedItem?.ToString() ?? "All";
             if (cat.StartsWith("--")) cat = "All";
             LoadDataGrid(dgvAll, cat);
+        }
+
+        private void btnUsrLogout_Click(object sender, EventArgs e)
+        {
+            Login stk = new Login();
+            stk.Show();
+            this.Close();
         }
     }
 }
